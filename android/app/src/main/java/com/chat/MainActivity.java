@@ -1,4 +1,4 @@
-package com.GitChat;
+package com.gitchat;
 
 import com.facebook.react.ReactActivity;
 
