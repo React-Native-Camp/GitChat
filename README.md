@@ -40,7 +40,7 @@ As developers and Github users ourselves, we noticed that we always needed a sec
 
 - **As a user**, I expect to be able to create a group chat when I click on the `group chat icon` in the contacts screen.
 
-- **As a user**, I expect to be directed to another screen that has includes a `header`, a `search bar`, `my contacts list` with a `plus icon` to be able to add them to a group chat of my choosing then click the `done button`.
+- **As a user**, I expect to be directed to another screen that includes a `header`, a `search bar`, `my contacts list` with a `plus icon` to be able to add them to a group chat of my choosing then click the `done button`.
 
 - **As a user**, I expect to be directed to another page after I click the `done button`, which shows a pop-up asking me to choose a name for my group chat then confirm by clicking the `done button`, which then will direct me to the group chat I created.
 
