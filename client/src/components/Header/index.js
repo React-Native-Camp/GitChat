@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/icons/HeaderLogo.svg';
+import Logo from '../../assets/icons/HeaderLogo.svg';
 import {Appbar, Avatar, Provider as PaperProvider} from 'react-native-paper';
 import {View} from 'react-native';
 import styles from './style';
