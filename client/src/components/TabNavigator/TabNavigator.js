@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
-
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {styles} from './styles';
 
 // Chat, Contacts and Profile Components for testing the navigation and will be removed later
 function Chat() {
@@ -39,14 +39,16 @@ function TabNavigator() {
       initialRouteName="Chat"
       tabBarOptions={{
         activeTintColor: '#51984C',
+        style: {...styles.tabNavigator},
+        labelStyle: {...styles.labelStyle},
       }}>
       <Tab.Screen
         name="Chat"
         component={Chat}
         options={{
           tabBarLabel: 'Chat',
-          tabBarIcon: ({color, size}) => (
-            <EntypoIcon name="chat" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <EntypoIcon name="chat" color={color} size={33} />
           ),
         }}
       />
@@ -56,8 +58,8 @@ function TabNavigator() {
         component={Contacts}
         options={{
           tabBarLabel: 'Contacts',
-          tabBarIcon: ({color, size}) => (
-            <FontAwesome5Icon name="address-book" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <FontAwesome5Icon name="address-book" color={color} size={33} />
           ),
         }}
       />
@@ -67,8 +69,8 @@ function TabNavigator() {
         component={Profile}
         options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: ({color, size}) => (
-            <FontAwesome5Icon name="user-circle" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <FontAwesome5Icon name="user-circle" color={color} size={33} />
           ),
         }}
       />
