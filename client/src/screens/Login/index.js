@@ -1,27 +1,30 @@
 import React from 'react';
-import {View, Text, Linking, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, Linking, TouchableOpacity, Image} from 'react-native';
 import {Button} from 'react-native-paper';
 
-import LandingPageImage from '../../assets/images/landingPageLogo.svg';
+import styles from './style';
+import GithubLogo from '../../assets/images/githubLogo.svg';
 
 const Login = ({navigation}) => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.logoContainer}>
-        <LandingPageImage />
+        <GithubLogo style={styles.logo} />
       </View>
 
       <View style={styles.loginContainer}>
-        <Text style={styles.loginText}>Login</Text>
+        <Text style={styles.login}>Login</Text>
 
         <View>
-          <Button
-            icon="github"
-            mode="contained"
+          <TouchableOpacity
             style={styles.loginButton}
             onPress={() => navigation.navigate('ChatPage')}>
-            Login with github
-          </Button>
+            <Image
+              style={styles.githubIcon}
+              source={require('../../assets/icons/github.png')}
+            />
+            <Text style={styles.loginText}>Login with github</Text>
+          </TouchableOpacity>
 
           <View style={styles.createAccountTextContainer}>
             <Text style={styles.createAccountText}>
@@ -38,59 +41,5 @@ const Login = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#24292E',
-  },
-  logoContainer: {
-    flex: 1.3,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  loginContainer: {
-    flex: 2,
-    width: '100%',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    backgroundColor: '#FFFBFB',
-    borderTopLeftRadius: 60,
-  },
-  loginText: {
-    fontFamily: 'Rubik',
-    fontSize: 30,
-    lineHeight: 36,
-    color: '#000000',
-  },
-  loginButton: {
-    width: 280,
-    height: 60,
-    backgroundColor: '#24292E',
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
-  createAccountTextContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 6,
-    flexWrap: 'wrap',
-  },
-  createAccountText: {
-    textAlign: 'center',
-    fontSize: 13,
-    fontWeight: 'bold',
-  },
-  hereLink: {
-    color: 'blue',
-    fontSize: 12,
-    paddingLeft: 3,
-    fontWeight: 'bold',
-  },
-});
 
 export default Login;
