@@ -9,16 +9,16 @@ const styles = StyleSheet.create({
     display: 'flex',
     width: ' 100%',
     flexDirection: 'row',
-    paddingLeft: 10,
+    paddingLeft: 7,
   },
 
   Logo: {
     backgroundColor: '#24292E',
-    paddingLeft: 8,
+    paddingLeft: 10,
   },
   text: {
     color: '#ffffff',
-    paddingTop: 4,
+    paddingTop: 3,
     fontFamily: 'Roboto',
   },
 });
