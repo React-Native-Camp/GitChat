@@ -6,19 +6,19 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-  },
-  container: {
-    margin: 15,
     display: 'flex',
-    width: 200,
+    width: ' 100%',
     flexDirection: 'row',
+    paddingLeft: 10,
   },
+
   Logo: {
     backgroundColor: '#24292E',
+    paddingLeft: 8,
   },
   text: {
     color: '#ffffff',
-    paddingTop: 7,
+    paddingTop: 4,
     fontFamily: 'Roboto',
   },
 });
