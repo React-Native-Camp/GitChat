@@ -33,7 +33,7 @@ function Profile() {
 // to create the tab navigator
 const Tab = createBottomTabNavigator();
 
-function TabNavigator() {
+const TabNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName="Chat"
@@ -48,7 +48,7 @@ function TabNavigator() {
         options={{
           tabBarLabel: 'Chat',
           tabBarIcon: ({color}) => (
-            <EntypoIcon name="chat" color={color} size={33} />
+            <EntypoIcon name="chat" color={color} size={30} />
           ),
         }}
       />
@@ -59,7 +59,7 @@ function TabNavigator() {
         options={{
           tabBarLabel: 'Contacts',
           tabBarIcon: ({color}) => (
-            <FontAwesome5Icon name="address-book" color={color} size={33} />
+            <FontAwesome5Icon name="user-friends" color={color} size={30} />
           ),
         }}
       />
@@ -70,12 +70,12 @@ function TabNavigator() {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({color}) => (
-            <FontAwesome5Icon name="user-circle" color={color} size={33} />
+            <FontAwesome5Icon name="user-alt" color={color} size={30} />
           ),
         }}
       />
     </Tab.Navigator>
   );
-}
+};
 
 export default TabNavigator;
