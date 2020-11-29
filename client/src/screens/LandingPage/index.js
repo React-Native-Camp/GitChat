@@ -2,7 +2,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-import LandingPageImage from '../../assets/images/landingPageLogo.svg';
+import LandingPageImage from '../../assets/images/githubLogo.svg';
 import UpArrow from '../../assets/icons/upArrow.svg';
 import styles from './style';
 
