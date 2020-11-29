@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Text, Linking, TouchableOpacity, Image} from 'react-native';
-import {Button} from 'react-native-paper';
 
 import styles from './style';
 import GithubLogo from '../../assets/images/githubLogo.svg';

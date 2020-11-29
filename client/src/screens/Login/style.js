@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#24292E',
   },
   logoContainer: {
-    flex: 1.4,
+    flex: 2.1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 90,
     marginTop: 7,
-    flexWrap: 'wrap',
   },
   createAccountText: {
     textAlign: 'center',
