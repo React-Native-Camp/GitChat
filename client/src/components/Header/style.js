@@ -1,11 +1,8 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  bottom: {
+  header: {
     backgroundColor: '#24292E',
-    left: 0,
-    right: 0,
-    bottom: 0,
     display: 'flex',
     width: ' 100%',
     flexDirection: 'row',
