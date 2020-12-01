@@ -4,15 +4,16 @@ import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {styles} from './styles';
+import ChatTab from '../../ChatTab';
 
 // Chat, Contacts and Profile Components for testing the navigation and will be removed later
-function Chat() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Chat!</Text>
-    </View>
-  );
-}
+// function Chat() {
+//   return (
+//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+//       <Text>Chat!</Text>
+//     </View>
+//   );
+// }
 
 function Contacts() {
   return (
@@ -36,17 +37,17 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Chat"
+      initialRouteName="ChatTab"
       tabBarOptions={{
         activeTintColor: '#51984C',
         style: {...styles.tabNavigator},
         labelStyle: {...styles.labelStyle},
       }}>
       <Tab.Screen
-        name="Chat"
-        component={Chat}
+        name="ChatTab"
+        component={ChatTab}
         options={{
-          tabBarLabel: 'Chat',
+          tabBarLabel: 'ChatTab',
           tabBarIcon: ({color}) => (
             <EntypoIcon name="chat" color={color} size={30} />
           ),
