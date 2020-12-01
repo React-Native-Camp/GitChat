@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import LandingPage from './src/screens/LandingPage';
 import Login from './src/screens/Login';
+import AppMainPage from './src/screens/AppMainPage';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,12 @@ const ScreenNavigator = () => {
         options={{headerShown: false}}
         name="Login"
         component={Login}
+      />
+
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="AppMainPage"
+        component={AppMainPage}
       />
     </Stack.Navigator>
   );
