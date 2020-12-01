@@ -17,7 +17,7 @@ const Login = ({navigation}) => {
         <View>
           <TouchableOpacity
             style={styles.loginButton}
-            onPress={() => navigation.navigate('ChatPage')}>
+            onPress={() => navigation.navigate('AppMainPage')}>
             <Image
               style={styles.githubIcon}
               source={require('../../assets/icons/github.png')}
