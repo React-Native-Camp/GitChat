@@ -3,14 +3,14 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 
 import {Button} from 'react-native-paper';
-
+import lonelyChat from '../../assets/images/lonelyChat.png';
 import styles from './style';
 
 const ChatTab = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.lonelyImgContainer}>
-        <Image source={require('../../assets/images/lonelyChat.png')} />
+        <Image source={lonelyChat} />
 
         <Text style={styles.feelingLonelyText}>Feeling Lonely?</Text>
 

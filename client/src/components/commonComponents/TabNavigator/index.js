@@ -6,15 +6,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {styles} from './styles';
 import ChatTab from '../../ChatTab';
 
-// Chat, Contacts and Profile Components for testing the navigation and will be removed later
-// function Chat() {
-//   return (
-//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-//       <Text>Chat!</Text>
-//     </View>
-//   );
-// }
-
 function Contacts() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -47,7 +38,7 @@ const TabNavigator = () => {
         name="ChatTab"
         component={ChatTab}
         options={{
-          tabBarLabel: 'ChatTab',
+          tabBarLabel: 'Chat',
           tabBarIcon: ({color}) => (
             <EntypoIcon name="chat" color={color} size={30} />
           ),
