@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {styles} from './styles';
+import {styles} from './style';
 import ChatTab from '../../ChatTab';
 
 function Contacts() {
@@ -30,7 +30,7 @@ const TabNavigator = () => {
     <Tab.Navigator
       initialRouteName="ChatTab"
       tabBarOptions={{
-        activeTintColor: '#51984C',
+        activeTintColor: '#639BBB',
         style: {...styles.tabNavigator},
         labelStyle: {...styles.labelStyle},
       }}>
