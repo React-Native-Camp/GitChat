@@ -3,21 +3,14 @@ import {View, Text} from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {styles} from './style';
 import ChatTab from '../../ChatTab';
+import ProfileTab from '../../ProfileTab';
+import {styles} from './style';
 
 function Contacts() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Contacts!</Text>
-    </View>
-  );
-}
-
-function Profile() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Profile!</Text>
     </View>
   );
 }
@@ -57,12 +50,12 @@ const TabNavigator = () => {
       />
 
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="ProfileTab"
+        component={ProfileTab}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({color}) => (
-            <FontAwesome5Icon name="user-alt" color={color} size={30} />
+            <FontAwesome5Icon name="user-alt" color={color} size={27} />
           ),
         }}
       />
