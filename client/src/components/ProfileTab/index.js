@@ -5,17 +5,15 @@ import styles from './style';
 
 const ProfileTab = ({navigation}) => {
   useEffect(() => {
-    navigation.addListener('tabPress', (e) => {
-      // Prevent default behavior
-      e.preventDefault();
-      return Linking.openURL('https://github.com');
+    navigation.addListener('focus', (e) => {
+      return Linking.openURL('https://github.com/Rahaf-96');
     });
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={styles.profileContainer}>
       <Text style={styles.redirectionNote}>
-        if you are not automaticly redirected,
+        If you are not automatically redirected,
       </Text>
 
       <TouchableOpacity onPress={() => Linking.openURL('https://github.com')}>
