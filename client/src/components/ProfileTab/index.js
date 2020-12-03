@@ -26,5 +26,3 @@ const ProfileTab = ({navigation}) => {
 };
 
 export default ProfileTab;
-
-// import {View, Text, Linking, TouchableOpacity, Image} from 'react-native';

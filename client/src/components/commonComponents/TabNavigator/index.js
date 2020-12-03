@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Linking} from 'react-native';
+import {View, Text} from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
