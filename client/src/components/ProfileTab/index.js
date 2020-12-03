@@ -16,7 +16,8 @@ const ProfileTab = ({navigation}) => {
         If you are not automatically redirected,
       </Text>
 
-      <TouchableOpacity onPress={() => Linking.openURL('https://github.com')}>
+      <TouchableOpacity
+        onPress={() => Linking.openURL('https://github.com/Rahaf-96')}>
         <Text style={styles.githubProfileLink}> Click here to continue</Text>
       </TouchableOpacity>
     </View>
