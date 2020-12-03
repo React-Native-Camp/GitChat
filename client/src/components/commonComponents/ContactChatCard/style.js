@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   avatarNameContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     width: '55%',
   },
