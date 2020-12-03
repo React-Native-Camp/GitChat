@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import {Button, Dialog, Portal} from 'react-native-paper';
-import {TextInput} from 'react-native-paper';
+import {Button, Dialog, Portal, TextInput} from 'react-native-paper';
 
 const PopUp = () => {
   const [visible, setvisible] = useState(false);
@@ -17,7 +16,7 @@ const PopUp = () => {
         style={{
           marginTop: '70%',
         }}>
-        Done
+        DONE
       </Button>
       <Portal>
         <Dialog visible={visible} onDismiss={hidePopUp}>
