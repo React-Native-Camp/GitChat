@@ -17,7 +17,7 @@ const ChatHeader = ({contectName, showGroupIcon}) => {
       <Button
         icon="account-group-outline"
         color="white"
-        disabled={showGroupIcon}
+        style={showGroupIcon ? style.show : style.hide}
         onPress={() => {}}
       />
     </Appbar.Header>
