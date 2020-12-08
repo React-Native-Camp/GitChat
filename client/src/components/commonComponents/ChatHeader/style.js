@@ -18,6 +18,12 @@ const style = StyleSheet.create({
     color: 'white',
     paddingLeft: 20,
   },
+  hide: {
+    display: 'none',
+  },
+  show: {
+    display: 'flex',
+  },
 });
 
 export default style;
