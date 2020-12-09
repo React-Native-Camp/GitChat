@@ -10,14 +10,7 @@ const PopUp = () => {
 
   return (
     <View>
-      <Button
-        onPress={showPopUp}
-        // eslint-disable-next-line react-native/no-inline-styles
-        style={{
-          marginTop: '70%',
-        }}>
-        DONE
-      </Button>
+      <Button onPress={showPopUp}>DONE</Button>
       <Portal>
         <Dialog visible={visible} onDismiss={hidePopUp}>
           <Dialog.Title>Enter Your Group Name</Dialog.Title>
