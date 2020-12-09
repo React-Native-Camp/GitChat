@@ -23,6 +23,10 @@ const style = StyleSheet.create({
   },
   show: {
     display: 'flex',
+    color: '#ffffff',
+  },
+  phoneIcon: {
+    backgroundColor: '#24292E',
   },
 });
 
