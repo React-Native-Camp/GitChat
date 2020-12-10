@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
 import {IconButton, Avatar, Title} from 'react-native-paper';
+import Icon from 'react-native-vector-icons/Entypo';
 import styles from './style';
 
-const ContactChatCard = ({contactName, icon, handleIconClick}) => {
+const ContactChatCard = ({contactName, icon, handleIconClick, ImgUrl}) => {
   return (
     <ScrollView>
       <View style={styles.card}>
@@ -11,7 +12,7 @@ const ContactChatCard = ({contactName, icon, handleIconClick}) => {
           <Avatar.Image
             style={styles.avatar}
             size={60}
-            source={{uri: 'https://picsum.photos/700'}}
+            source={{uri: ImgUrl}}
           />
           <Title style={styles.contactName}>{contactName}</Title>
         </View>
