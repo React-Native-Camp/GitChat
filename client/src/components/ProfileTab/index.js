@@ -5,9 +5,10 @@ import styles from './style';
 
 const ProfileTab = ({navigation}) => {
   useEffect(() => {
-    navigation.addListener('focus', (e) => {
-      return Linking.openURL('https://github.com/Rahaf-96');
+    const unsubscribe = navigation.addListener('focus', (e) => {
+      Linking.openURL('https://github.com/Rahaf-96');
     });
+    return unsubscribe;
   }, [navigation]);
 
   return (
