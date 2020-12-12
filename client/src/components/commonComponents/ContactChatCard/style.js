@@ -18,11 +18,7 @@ const styles = StyleSheet.create({
     width: '55%',
   },
   avatar: {
-    borderStyle: 'solid',
-    borderWidth: 0.8,
-    borderColor: 'black',
     borderRadius: 50,
-    backgroundColor: '#fff',
     marginRight: 10,
   },
   contactName: {
@@ -32,18 +28,12 @@ const styles = StyleSheet.create({
     maxWidth: '90%',
   },
   icon: {
-    width: 50,
-    height: 50,
-    backgroundColor: '#414141',
+    width: 40,
+    height: 40,
+    backgroundColor: '#787878',
+    color: '#ffffff',
     borderRadius: 50,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-    elevation: 4,
+    padding: 10,
   },
 });
 

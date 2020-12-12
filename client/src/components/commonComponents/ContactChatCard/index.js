@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
-import {IconButton, Avatar, Title} from 'react-native-paper';
-import Icon from 'react-native-vector-icons/Entypo';
+import {Avatar, Title} from 'react-native-paper';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from './style';
 
-const ContactChatCard = ({contactName, icon, handleIconClick, ImgUrl}) => {
+const ContactChatCard = ({contactName, handleIconClick, ImgUrl}) => {
   return (
     <ScrollView>
       <View style={styles.card}>
@@ -17,9 +17,8 @@ const ContactChatCard = ({contactName, icon, handleIconClick, ImgUrl}) => {
           <Title style={styles.contactName}>{contactName}</Title>
         </View>
 
-        <IconButton
-          icon={icon}
-          color="#fff"
+        <Ionicons
+          name="chatbox-ellipses"
           size={20}
           style={styles.icon}
           animated={true}
