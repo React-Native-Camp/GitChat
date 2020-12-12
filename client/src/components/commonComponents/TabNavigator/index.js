@@ -1,19 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ChatTab from '../../ChatTab';
 import ProfileTab from '../../ProfileTab';
+import Contacts from '../../../screens/ContactsPage';
 import {styles} from './style';
-
-function Contacts() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Contacts!</Text>
-    </View>
-  );
-}
 
 // to create the tab navigator
 const Tab = createBottomTabNavigator();
