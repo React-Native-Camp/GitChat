@@ -2,11 +2,12 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   button: {
-    width: 37,
-    height: 37,
+    width: 42,
+    height: 42,
     backgroundColor: '#24292E',
     borderRadius: 50,
     marginTop: 15,
+    marginLeft: 10,
   },
   searchSection: {
     display: 'flex',
