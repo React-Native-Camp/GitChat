@@ -6,13 +6,14 @@ import axios from 'axios';
 import Search from '../../components/commonComponents/Search';
 import ContactChatCard from '../../components/commonComponents/ContactChatCard';
 
-//userName default until we get the userName from the Outh
-const Contacts = (userName = 'bayan-404') => {
-  const [Data, setData] = useState();
+const Contacts = () => {
+  //userName is default until we get the userName from the OAuth
+  const [userName, setUserName] = useState('bayan-404');
+  const [followers, setFollowers] = useState();
 
   useEffect(() => {
     axios(`https://api.github.com/users/${userName}/followers`)
-      .then(({data}) => setData(data))
+      .then(({data}) => setFollowers(data))
       .catch((err) => err);
   }, [userName]);
 
@@ -24,18 +25,16 @@ const Contacts = (userName = 'bayan-404') => {
           icon="account-group-outline"
           mode="contained"
           color="white"
-          onPress={() => console.log('Pressed')}
           style={styles.button}
         />
       </View>
       <ScrollView style={styles.contactsContainer}>
-        {Data ? (
-          Data.map((follower) => (
+        {followers ? (
+          followers.map((follower) => (
             <ContactChatCard
               key={follower.id}
               contactName={follower.login}
               ImgUrl={follower.avatar_url}
-              icon="chat"
             />
           ))
         ) : (
