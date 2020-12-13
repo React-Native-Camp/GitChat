@@ -2,9 +2,9 @@ import {useEffect, useRef, useState} from 'react';
 import socketIOClient from 'socket.io-client';
 
 const NEW_CHAT_MESSAGE_EVENT = 'newChatMessage'; // Name of the event
-const SOCKET_SERVER_URL = 'http://192.168.1.10:4000';
-
-const useChat = (roomId = 1) => {
+const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL;
+// To-Do : handle private rooms
+const useChat = () => {
   const [messages, setMessages] = useState([]); // Sent and received messages
   const socketRef = useRef();
 
@@ -31,7 +31,6 @@ const useChat = (roomId = 1) => {
   // Sends a message to the server that
   // forwards it to all users in the same room
   const sendMessage = (messageBody) => {
-    console.log('messaage', messageBody);
     socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, {
       body: messageBody,
       senderId: socketRef.current.id,

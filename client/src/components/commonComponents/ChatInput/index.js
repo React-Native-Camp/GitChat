@@ -9,8 +9,8 @@ import useChat from './useChat';
 
 const ChatInput = () => {
   const [isTyping, setIsTyping] = useState(false);
-  const {messages, sendMessage} = useChat();
-  const [newMessage, setNewMessage] = React.useState(''); // Message to be sent
+  const {messages, sendMessage} = useChat(); // hook to send messages to server socket
+  const [newMessage, setNewMessage] = useState(''); // Message to be sent
 
   useEffect(() => {
     // to change the mic icon to send icon when the user start typing
