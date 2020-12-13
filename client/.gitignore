@@ -28,7 +28,6 @@ build/
 .gradle
 local.properties
 *.iml
-
 # node.js
 #
 node_modules/
@@ -61,3 +60,4 @@ buck-out/
 # packages.lock files
 package-lock.json
 yarn.lock
+.env
