@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  conversation: {
+  conversationScreen: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-  chatContainer: {
+  chatInputContainer: {
     flex: 1,
     flexDirection: 'row',
     marginLeft: 15,

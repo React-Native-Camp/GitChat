@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {TextInput} from 'react-native-paper';
 import {Text, View} from 'react-native';
 import IonIcon from 'react-native-vector-icons/dist/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+
 import {styles} from './style';
 import useChat from './useChat';
 
@@ -11,11 +12,13 @@ const ChatInput = () => {
   const {messages, sendMessage} = useChat();
   const [newMessage, setNewMessage] = React.useState(''); // Message to be sent
 
-  const handleNewMessageChange = (newMessage) => {
-    setNewMessage(newMessage);
-
+  useEffect(() => {
     // to change the mic icon to send icon when the user start typing
     newMessage.length >= 1 ? setIsTyping(true) : setIsTyping(false);
+  }, [newMessage, isTyping]);
+
+  const handleNewMessageChange = (newMessage) => {
+    setNewMessage(newMessage);
   };
 
   const handleSendMessage = () => {
@@ -24,7 +27,7 @@ const ChatInput = () => {
   };
 
   return (
-    <View style={styles.conversation}>
+    <View style={styles.conversationScreen}>
       <View style={styles.messagesContainer}>
         {messages.map((message, i) => (
           <Text
@@ -38,14 +41,13 @@ const ChatInput = () => {
           </Text>
         ))}
       </View>
-      <View style={styles.chatContainer}>
+      <View style={styles.chatInputContainer}>
         <TextInput
           value={newMessage}
           mode="outlined"
           placeholder="Type a message"
           onChangeText={handleNewMessageChange}
           onSubmitEditing={handleSendMessage}
-          // multiline={true}
           dense={true}
           style={styles.chatInput}
           theme={{colors: {primary: '#639BBB', underlineColor: 'transparent'}}}
