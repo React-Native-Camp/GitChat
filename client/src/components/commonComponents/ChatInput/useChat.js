@@ -1,8 +1,8 @@
 import {useEffect, useRef, useState} from 'react';
 import socketIOClient from 'socket.io-client';
+import {SOCKET_SERVER_URL} from '@env';
 
 const NEW_CHAT_MESSAGE_EVENT = 'newChatMessage'; // Name of the event
-const SOCKET_SERVER_URL = process.env.SOCKET_SERVER_URL;
 // To-Do : handle private rooms
 const useChat = () => {
   const [messages, setMessages] = useState([]); // Sent and received messages
